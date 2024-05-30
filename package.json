@@ -1,0 +1,43 @@
+{
+	"name": "teikun-cli-v2",
+	"packageManager": "yarn@4.2.2",
+	"type": "commonjs",
+	"version": "0.2.1",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"bin": {
+		"teikun-cli": "./dist/teikun-cli.js"
+	},
+	"module": "",
+	"exports": {
+		"types": {
+			"import": "./dist/index.d.ts",
+			"require": "./dist/index.d.ts"
+		},
+		"import": "./dist/index.js",
+		"require": "./dist/index.js"
+	},
+	"scripts": {
+		"test": "jest",
+		"build": "tsc --outDir ./dist",
+		"prepublishOnly": "yarn build"
+	},
+	"keywords": [
+		"cli-js",
+		"teikun-cli",
+		"js-teikun-cli",
+		"js"
+	],
+	"author": "Aziz Febriyanto <azizfebriyanto12@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"fs": "^0.0.1-security",
+		"typescript": "^5.4.5"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.12",
+		"@types/node": "^20.12.12",
+		"jest": "^29.7.0",
+		"ts-jest": "^29.1.3"
+	}
+}
